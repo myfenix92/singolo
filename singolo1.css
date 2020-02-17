@@ -209,11 +209,6 @@ span {
   letter-spacing: -0.033em;
 }
 
-section img {
-  float: left;
-  margin-right: 20px;
-}
-
 section h3 {
   font: 18px "Lato Regular", sans-serif;
   font-weight: bold;
@@ -224,7 +219,6 @@ section h3 {
 section p {
   font: 12px "Lato Light", sans-serif;
   line-height: 21px;
-  overflow: hidden;
   letter-spacing: -0.025em;
 }
 
@@ -232,17 +226,40 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-right: -22px;
-  padding-bottom: 29px;
+  padding-bottom: 33px;
   align-items: flex-start;
 }
 
 article {
-  padding-bottom: 31px;
-  padding-right: 14px;
+  padding: 0 20px 30px 80px;
 }
 
 footer {
-  height: 100px;  
+  height: 100px;
   background: #282828;
   margin-top: 6px;
+}
+
+.design {
+  background: url(/singolo/assets/pen.png) no-repeat 1px 1px;
+}
+
+.ideas {
+  background: url(/singolo/assets/bulb.png) no-repeat 0px 1px;
+}
+
+.answer {
+  background: url(/singolo/assets/heart.png) no-repeat 0px 0.5px;
+}
+
+.phone {
+  background: url(/singolo/assets/phone.png) no-repeat 0.5px 1px;
+}
+
+.support {
+  background: url(/singolo/assets/bubble.png) no-repeat 0px 1.5px;
+}
+
+.star {
+  background: url(/singolo/assets/star.png) no-repeat 0px 1.5px;
 }
