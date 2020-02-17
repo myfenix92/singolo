@@ -22,7 +22,10 @@
   box-sizing: border-box;
 }
 
-header, .slider, .services {
+header,
+.slider,
+.services,
+footer {
   width: 1020px;
   margin: 0 auto;
   padding: 0 40px;
@@ -178,4 +181,68 @@ span {
 .img_left:hover,
 .img_right:hover {
   cursor: pointer;
+}
+
+/* services */
+
+.services {
+  background: #f2f2f2;
+  box-shadow: 0px 6px 0px #fff;
+  margin-top: 6px;
+  color: #666d89;
+}
+
+.our_services {
+  font: 18px 'Lato Light', sans-serif;
+  text-align: justify;
+  letter-spacing: -0.028em;
+  font-weight: lighter;
+  line-height: 30px;
+  padding-bottom: 45px;
+}
+
+.services h2 {
+  padding-top: 62px;
+  padding-bottom: 18px;
+  font: 30px "Lato Regular", sans-serif;
+  font-weight: bolder;
+  letter-spacing: -0.033em;
+}
+
+section img {
+  float: left;
+  margin-right: 20px;
+}
+
+section h3 {
+  font: 18px "Lato Regular", sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.045em;
+  padding-bottom: 8px;
+}
+
+section p {
+  font: 12px "Lato Light", sans-serif;
+  line-height: 21px;
+  overflow: hidden;
+  letter-spacing: -0.025em;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: -22px;
+  padding-bottom: 29px;
+  align-items: flex-start;
+}
+
+article {
+  padding-bottom: 31px;
+  padding-right: 14px;
+}
+
+footer {
+  height: 100px;  
+  background: #282828;
+  margin-top: 6px;
 }
