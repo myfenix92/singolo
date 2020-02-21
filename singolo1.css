@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Lato Regular';
   font-style: normal;
   font-weight: 400;
@@ -14,19 +14,21 @@
   src: local('Lato Light'), local('Lato-Light'),
     url('/singolo/assets/lato-v16-latin-300.woff2') format('woff2'),
     url('/singolo/assets/lato-v16-latin-300.woff') format('woff'),
-}
+} */
 
-* {
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 header,
 .slider,
 .services,
 footer {
-  width: 1020px;
+  width: 940px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -39,14 +41,14 @@ header {
 }
 
 .header_content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: -6px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: -8px;
 }
 
-.menu_items ul {
-  display: flex;
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 li {
@@ -54,29 +56,31 @@ li {
 }
 
 .logo {
-  padding-top: 30px;
-  padding-bottom: 24px;
+  padding: 29px 0;
+  margin: 0;
   text-transform: uppercase;
   color: #ffffff;
-  font: 25px "Lato Regular", sans-serif;
-  letter-spacing: -0.05em;
+  font: 25px Lato, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
 }
 
-.menu_items {
-  padding-top: 49px;
-  padding-bottom: 32px;
+.menu {
+  padding: 25px 0 17px 0;
 }
 
-.menu_items ul li {
-  font: 12px "Lato Regular", sans-serif;
+.menu ul li {
+  font: 12px "Lato", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.006em;
 }
 
-.menu_items ul li:not(:last-child):after {
+.menu ul li:not(:last-child):after {
   position: relative;
-  bottom: -1px;
-  content: "\B7";
+  font-weight: 300;
+  top: -2px;
+  content: ".";
   padding: 13px;
   color: #d3d4d5;
 }
@@ -101,7 +105,6 @@ span {
   box-shadow: 0px 6px 0px #ea676b;
   height: 594px;
   position: relative;
-  margin: 0 auto;
   margin-top: 6px;
 }
 
@@ -123,21 +126,6 @@ span {
   z-index: 2;
   top: 185px;
   right: 199px;
-}
-
-.horizontal_items {
-  position: absolute;
-  z-index: 3;
-  top: 260px;
-  right: 153px;
-}
-
-.vertical_items {
-  position: absolute;
-  transform: rotate(-90deg);
-  z-index: 2;
-  top: 265px;
-  left: 3px;
 }
 
 .vertical_image {
@@ -188,50 +176,53 @@ span {
 .services {
   background: #f2f2f2;
   box-shadow: 0px 6px 0px #fff;
-  margin-top: 6px;
+  margin-top: -19px;
   color: #666d89;
 }
 
 .our_services {
-  font: 18px 'Lato Light', sans-serif;
+  font: 18px 'Lato', sans-serif;
   text-align: justify;
-  letter-spacing: -0.028em;
-  font-weight: lighter;
   line-height: 30px;
-  padding-bottom: 45px;
+  margin-bottom: 30px;
+  letter-spacing: -0.012em;
 }
 
 .services h2 {
   padding-top: 62px;
-  padding-bottom: 18px;
-  font: 30px "Lato Regular", sans-serif;
-  font-weight: bolder;
-  letter-spacing: -0.033em;
+  font: 30px Lato, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0;
 }
 
 section h3 {
-  font: 18px "Lato Regular", sans-serif;
-  font-weight: bold;
-  letter-spacing: -0.045em;
-  padding-bottom: 8px;
+  font: 18px Lato, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 14px;
+  letter-spacing: -0.04em;
 }
 
 section p {
-  font: 12px "Lato Light", sans-serif;
+  font: 12px "Lato", sans-serif;
+  font-weight: 300;
   line-height: 21px;
-  letter-spacing: -0.025em;
+  margin-top: 9px;
+  
 }
 
 section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-right: -22px;
-  padding-bottom: 33px;
-  align-items: flex-start;
+  margin-right: -21px;
+  padding-bottom: 46px;
 }
 
 article {
-  padding: 0 20px 30px 80px;
+  padding: 0 20px 25px 80px;
+  max-height: 97px;
+  overflow: hidden;
 }
 
 footer {
@@ -241,25 +232,25 @@ footer {
 }
 
 .design {
-  background: url(/singolo/assets/pen.png) no-repeat 1px 1px;
+  background: url(/singolo/assets/pen.png) no-repeat 1px 16px;
 }
 
 .ideas {
-  background: url(/singolo/assets/bulb.png) no-repeat 0px 1px;
+  background: url(/singolo/assets/bulb.png) no-repeat 0px 16px;
 }
 
 .answer {
-  background: url(/singolo/assets/heart.png) no-repeat 0px 0.5px;
+  background: url(/singolo/assets/heart.png) no-repeat 0px 16px;
 }
 
 .phone {
-  background: url(/singolo/assets/phone.png) no-repeat 0.5px 1px;
+  background: url(/singolo/assets/phone.png) no-repeat 0.5px 17px;
 }
 
 .support {
-  background: url(/singolo/assets/bubble.png) no-repeat 0px 1.5px;
+  background: url(/singolo/assets/bubble.png) no-repeat 0px 17px;
 }
 
 .star {
-  background: url(/singolo/assets/star.png) no-repeat 0px 1.5px;
+  background: url(/singolo/assets/star.png) no-repeat 0px 17px;
 }
