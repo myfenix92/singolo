@@ -218,21 +218,21 @@
  }
 
  .ideas {
-   background: url(/assets/bulb.png) no-repeat 0px 16px;
+   background: url(assets/bulb.png) no-repeat 0px 16px;
  }
 
  .answer {
-   background: url(/assets/heart.png) no-repeat 0px 16px;
+   background: url(assets/heart.png) no-repeat 0px 16px;
  }
 
  .phone {
-   background: url(/assets/phone.png) no-repeat 0.5px 17px;
+   background: url(assets/phone.png) no-repeat 0.5px 17px;
  }
 
  .support {
-   background: url(/assets/bubble.png) no-repeat 0px 17px;
+   background: url(assets/bubble.png) no-repeat 0px 17px;
  }
 
  .star {
-   background: url(/assets/star.png) no-repeat 0px 17px;
+   background: url(assets/star.png) no-repeat 0px 17px;
  }
