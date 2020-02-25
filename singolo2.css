@@ -22,16 +22,16 @@
 }
 
 body {
-  color: #666d89;
   margin-top: 0px;
 }
+
+/* portfolio about */
 
 .portfolio {
   padding: 0 40px;
   background-color: #2d303a;
   box-shadow: 0 6px 0 #323746;
   padding-bottom: 47px;
-  
 }
 
 .title_portfolio {
@@ -40,6 +40,7 @@ body {
   padding-top: 60px;
   letter-spacing: 0.02em;
   margin: 0;
+  color: #666d89;
 }
 
 .text_portfolio {
@@ -48,6 +49,7 @@ body {
   margin: 0;
   padding-top: 22px;
   padding-bottom: 17px;
+  color: #767e9e;
 }
 
 .portfolio a {
@@ -74,8 +76,52 @@ li {
   margin-top: 21px;
   max-height: 605px;
   display: grid;
-  grid-row-gap: 16px;
+  gap: 16px 0;
   grid-template-columns: repeat(4, 240px);
   padding-left: 0;
   overflow: hidden;
+}
+
+/* about us block */
+
+.about_us {
+  padding: 0 40px;
+  background: #f2f2f2;
+  box-shadow: 0 6px 0 #ffffff;
+  margin-top: -24px;
+  
+}
+
+.title_about_us {
+  font: 30px 'Lato Black', sans-serif;
+  color: #666d89;
+  padding-top: 59px;
+  
+}
+
+.text_about_us{
+  font: 18px 'Lato Light', sans-serif;
+  line-height: 30px;
+  color: #767e9e;
+  margin-top: -12px;
+  letter-spacing: -0.012em;
+  text-align: justify;
+}
+
+.about_persons {
+  margin-top: 45px;
+  padding-left: 0;
+  display: grid;
+  gap: 0 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.person_title {
+  font: 18px 'Lato Black', sans-serif;
+  color: #666d89;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 5px;
+  text-overflow: ellipsis;
 }
