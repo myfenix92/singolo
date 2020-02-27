@@ -134,11 +134,10 @@ li {
   color: #adb1c2;
   text-align: justify;
   margin-top: -10px;
+  margin-bottom: 24px;
   line-height: 21px;
 }
 
-.person_links {
-  display: grid;
-  grid-template-columns: repeat(4, 40px);
-  margin-top: 24px;
+.about_us a {
+  margin-right: 4px;
 }
