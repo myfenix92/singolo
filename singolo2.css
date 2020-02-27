@@ -89,17 +89,18 @@ li {
   background: #f2f2f2;
   box-shadow: 0 6px 0 #ffffff;
   margin-top: -24px;
-  
+  padding-bottom: 47px;
+
 }
 
 .title_about_us {
   font: 30px 'Lato Black', sans-serif;
   color: #666d89;
   padding-top: 59px;
-  
+
 }
 
-.text_about_us{
+.text_about_us {
   font: 18px 'Lato Light', sans-serif;
   line-height: 30px;
   color: #767e9e;
@@ -117,11 +118,27 @@ li {
 }
 
 .person_title {
-  font: 18px 'Lato Black', sans-serif;
+  font: 18px 'Lato Regular', sans-serif;
+  font-weight: 900;
   color: #666d89;
-  margin-top: 10px;
+  margin-top: 11px;
+  max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
-  padding: 5px;
   text-overflow: ellipsis;
+  letter-spacing: 0.015em;
+}
+
+.person_text {
+  font: 12px 'Lato Regular', sans-serif;
+  color: #adb1c2;
+  text-align: justify;
+  margin-top: -10px;
+  line-height: 21px;
+}
+
+.person_links {
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  margin-top: 24px;
 }
