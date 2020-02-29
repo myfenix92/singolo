@@ -136,6 +136,12 @@ li {
   margin-top: -10px;
   margin-bottom: 24px;
   line-height: 21px;
+  padding-bottom: 20px;
+  min-height: 63px;
+}
+
+.person_links {
+  margin-top: -40px;
 }
 
 .about_us a {
