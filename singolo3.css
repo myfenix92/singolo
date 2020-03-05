@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Lato Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'),
+    url('assets/lato-v16-latin-regular.woff2') format('woff2'),
+    url('assets/lato-v16-latin-regular.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'),
+    url('assets/lato-v16-latin-300.woff2') format('woff2'),
+    url('assets/lato-v16-latin-300.woff') format('woff'),
+}
+
+.wrapper {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+body {
+  margin-top: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+.contact {
+  padding: 0 40px;
+  background: #f06c64;
+  color: #f0d8d9;
+  margin-top: -25px;
+  box-shadow: 0 6px 0 #ea676b;
+  margin-bottom: 6px;
+}
+
+.contact_title {
+  font: 30px 'Lato Regular', sans-serif;
+  font-weight: 900;
+  padding-top: 58px;
+  letter-spacing: 0.01em;
+}
+
+.contact_text {
+  font: 18px 'Lato Light', sans-serif;
+  line-height: 30px;
+  padding-bottom: 20px;
+  margin: 0;
+  margin-top: -6px;
+  letter-spacing: -0.012em;
+}
+
+.contact_form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 26px;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+input, textarea{
+  background: #d6564f;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  padding: 9px 0 13px 15px;
+  margin-right: 8px;
+}
+
+input[type="button"] {
+  background: #d6564f;
+  color: #f0d8d9;
+  cursor: pointer;
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 17px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ 
+  color: #e87675; 
+  font: 12px 'Lato Light', sans-serif;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder { 
+  color: #e87675; 
+  font: 12px 'Lato Light', sans-serif;
+}
+
+footer {
+  padding: 0 40px;
+  background: #2d303a;
+  color: #575d74;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.footer_copy {
+  padding-top: 33px;
+  padding-bottom: 32px;
+}
+
+.footer_links {
+  display: grid;
+  gap: 0 8px;
+  grid-template-columns: repeat(4, 30px);
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
