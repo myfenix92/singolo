@@ -70,7 +70,7 @@ input, textarea{
   border: 0;
   outline: none;
   border-radius: 5px;
-  padding: 9px 0 13px 15px;
+  padding: 9px 15px 13px 15px;
   margin-right: 8px;
 }
 
@@ -93,23 +93,81 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   font: 12px 'Lato Light', sans-serif;
 }
 
+.contact_info {
+  margin-top: -23px;
+  margin-left: 13px;
+}
+
+.contact_info a {
+  text-decoration: none;
+  color: #f0d8d9;
+}
+
+.contact_info_title {
+  font: 18px 'Lato Regular', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin-bottom: -3px;
+}
+
+.contact_info_text {
+  font: 12px 'Lato Light', sans-serif;
+  line-height: 22px;
+  text-align: justify;
+  letter-spacing: -0.02em;
+}
+
+.contact_item {
+  font: 12px 'Lato Light', sans-serif;
+  padding-top: 11px;
+  margin-left: -24px;
+}
+
+.contact_item li {
+  padding-bottom: 6px;
+  position: relative;
+  padding-left: 8px;
+}
+
+.img_location {
+  position: absolute;
+  left: -12px;
+  top: 2px;
+}
+
+.img_phone {
+  position: absolute;
+  left: -14px;
+  top: 2px;
+}
+
+.img_mail {
+  position: absolute;
+  left: -15px;
+  top: 6px;
+}
+
 footer {
   padding: 0 40px;
   background: #2d303a;
   color: #575d74;
   display: grid;
   grid-template-columns: 4fr 1fr;
+
 }
 
 .footer_copy {
-  padding-top: 33px;
+  padding-top: 18px;
   padding-bottom: 32px;
+  font: 12px 'Lato Light', sans-serif;
+  margin-bottom: -1px;
 }
 
 .footer_links {
   display: grid;
-  gap: 0 8px;
+  gap: 0 10px;
   grid-template-columns: repeat(4, 30px);
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 6px;
+  padding-left: 36px;
+  margin-bottom: -1px;
 }
