@@ -33,15 +33,15 @@ ul {
   padding: 0 40px;
   background: #f06c64;
   color: #f0d8d9;
-  margin-top: -19px;
+  margin-top: -30px;
   box-shadow: 0 6px 0 #ea676b;
-  margin-bottom: 6px;
+  margin-bottom: 25px;
 }
 
 .contact_title {
   font: 30px 'Lato Regular', sans-serif;
   font-weight: 900;
-  padding-top: 58px;
+  padding-top: 64px;
   letter-spacing: 0.01em;
 }
 
@@ -57,12 +57,12 @@ ul {
 .contact_form {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin-top: 26px;
+  margin-top: 3px;
+  margin-bottom: -19px;
 }
 
-form {
-  display: grid;
-  gap: 16px;
+form p:first-child {
+  margin-top: 20px;
 }
 
 input, textarea{
@@ -70,17 +70,27 @@ input, textarea{
   border: 0;
   outline: none;
   border-radius: 5px;
-  padding: 11px 15px;
+  padding-left: 15px;
   margin-right: 8px;
+  width: 603px;
+  height: 36px;
 }
 
-input[type="button"] {
+textarea {
+  height: 191px;
+  padding-top: 9px;
+}
+
+button {
   background: #d6564f;
+  font: 14px 'Lato Light', sans-serif;
   color: #f0d8d9;
   cursor: pointer;
   width: 100px;
-  padding: 10px;
-  margin-bottom: 17px;
+  padding: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #d6564f;
+  border-radius: 5px;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ 
@@ -94,8 +104,8 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 }
 
 .contact_info {
-  margin-top: -23px;
-  margin-left: 13px;
+  margin-top: -1px;
+  margin-left: 11px;
 }
 
 .contact_info a {
@@ -153,7 +163,7 @@ footer {
   color: #575d74;
   display: grid;
   grid-template-columns: 4fr 1fr;
-
+  margin-top: -6px;
 }
 
 .footer_copy {
