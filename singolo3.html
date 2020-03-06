@@ -19,8 +19,8 @@
           condimentum nibh.</p>
         <div class="contact_form">
           <form action="#" method="POST">
-            <input type="text" name="name" id="name_field" placeholder="Name (Required)" required>
-            <input type="text" name="email" id="email_field" placeholder="Email (Required)" required>
+            <input type="text" name="name" id="name_field" placeholder="Name (Required)" required pattern="^[a-zA-Z]+$">
+            <input type="email" name="email" id="email_field" placeholder="Email (Required)" required>
             <input type="text" name="subject" id="subject_field" placeholder="Subject">
             <textarea name="project" id="project_field" cols="30" rows="12"
               placeholder="Describe your project in detail..."></textarea>
@@ -28,13 +28,13 @@
           </form>
       </h2>
       <div class="contact_info">
-        <h3 class="contact_info_style">Contact Information</h3>
+        <h3 class="contact_info_title">Contact Information</h3>
         <p class="contact_info_text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet
           volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
-        <ul>
-          <li><img src="assets/location_icon.png" alt="">Elm St. 14/05 Lost City </li>
-          <li><img src="assets/phone_icon.png" alt=""><a href="tel:035283318635">03528 331 86 35</a></li>
-          <li><img src="assets/mail_icon.png" alt=""><a href="mailto:info@singolo.com">info@singolo.com</a></li>
+        <ul class="contact_item">
+          <li><img src="assets/location_icon.png" class="img_location" alt="">Elm St. 14/05 Lost City </li>
+          <li><img src="assets/phone_icon.png" class="img_phone" alt=""><a href="tel:035283318635">03528 331 86 35</a></li>
+          <li><img src="assets/mail_icon.png" class="img_mail" alt=""><a href="mailto:info@singolo.com">info@singolo.com</a></li>
         </ul>
         </div>
       </div>
