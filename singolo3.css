@@ -65,8 +65,7 @@ form p:first-child {
   margin-top: 20px;
 }
 
-input,
-textarea {
+input, textarea {
   background: #d6564f;
   border: 0;
   outline: none;
@@ -94,14 +93,12 @@ button {
   border-radius: 5px;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #e87675;
   font: 12px 'Lato Light', sans-serif;
 }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   color: #e87675;
   font: 12px 'Lato Light', sans-serif;
 }
