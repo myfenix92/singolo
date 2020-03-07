@@ -19,7 +19,6 @@
 .wrapper {
   width: 1020px;
   margin: 0 auto;
-
 }
 
 /*header*/
@@ -33,7 +32,6 @@ header {
 .header_content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin-top: -8px;
 }
 
 .menu ul {
