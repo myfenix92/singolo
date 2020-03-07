@@ -21,6 +21,10 @@
   margin: 0 auto;
 }
 
+body {
+  margin-top: 0;
+}
+
 /*header*/
 
 header {
