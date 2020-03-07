@@ -21,6 +21,10 @@
   margin: 0 auto;
 }
 
+body {
+  margin-top: 0;
+}
+
 /*header*/
 
 header {
@@ -280,10 +284,6 @@ article {
   border-color: #c5c5c5;
 }
 
-li {
-  list-style: none;
-}
-
 .image_portfolio {
   margin-top: 21px;
   max-height: 605px;
@@ -308,7 +308,6 @@ li {
   font: 30px 'Lato Black', sans-serif;
   color: #666d89;
   padding-top: 59px;
-
 }
 
 .text_about_us {
@@ -357,10 +356,6 @@ li {
 
 .about_us a {
   margin-right: 4px;
-}
-
-ul {
-  list-style: none;
 }
 
 .contact {
