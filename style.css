@@ -80,8 +80,13 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.menu a:not(.active):hover{
   color: #c75e5a;
+}
+
+.active > a{
+ border: 1px solid #fff;
+ padding: 5px;
 }
 
 span {
@@ -99,9 +104,17 @@ span {
   padding: 0 40px;
 }
 
+.blue_phone {
+  display: none;
+}
+
+.blue {
+  background: #648BF0;
+}
+
 .horizontal_base {
   position: absolute;
-  top: 174px;
+  top: 173px;
   right: 137px;
   z-index: 1;
 }
@@ -115,21 +128,21 @@ span {
 .horizontal_image {
   position: absolute;
   z-index: 2;
-  top: 185px;
-  right: 199px;
+  top: 188px;
+  right: 202px;
 }
 
 .vertical_image {
   position: absolute;
   z-index: 2;
-  top: 115px;
-  left: 123px;
+  top: 119px;
+  left: 127px;
 }
 
 .vertical_base {
   position: absolute;
   transform: rotate(-90deg);
-  top: 175px;
+  top: 174px;
   left: -9px;
   z-index: 1;
 }
@@ -138,6 +151,73 @@ span {
   position: absolute;
   top: 53px;
   left: 112px;
+}
+
+.vertical_base_center {
+  position: absolute;
+  top: 43px;
+  left: 383px;
+  z-index: 5;
+}
+
+.vertical_image_center {
+  position: absolute;
+  z-index: 6;
+  top: 112px;
+  left: 397px;
+}
+
+.vertical_shadow_center {
+  position: absolute;
+  top: 43px;
+  left: 383px;
+  z-index: 4;
+}
+
+.left_base {
+  position: absolute;
+  top: 152px;
+  left: 252px;
+  z-index: 2;
+  filter: opacity(50%);
+}
+
+.left_image {
+  position: absolute;
+  z-index: 3;
+  top: 194px;
+  left: 261px;
+  filter: opacity(50%);
+}
+
+.left_shadow {
+  position: absolute;
+  top: 152px;
+  left: 252px;
+  filter: opacity(50%);
+}
+
+.right_base {
+  position: absolute;
+  top: 152px;
+  right: 267px;
+  z-index: 2;
+  filter: opacity(50%);
+}
+
+.right_image {
+  position: absolute;
+  z-index: 3;
+  top: 194px;
+  right: 276px;
+  filter: opacity(50%);
+}
+
+.right_shadow {
+  position: absolute;
+  top: 152px;
+  right: 251px;
+  filter: opacity(50%);
 }
 
 .img_left,
@@ -284,14 +364,24 @@ article {
   border-color: #c5c5c5;
 }
 
+.portfolio > .portfolio_active {
+  color: #c5c5c5;
+  border-color: #c5c5c5;
+}
+
 .image_portfolio {
   margin-top: 21px;
-  max-height: 605px;
+  /* max-height: 605px; */
+  margin-right: -10px;
   display: grid;
   gap: 16px 0;
   grid-template-columns: repeat(4, 240px);
   padding-left: 0;
   overflow: hidden;
+}
+
+.border > img {
+  border: 5px solid #F06C64;
 }
 
 /* about us block */
