@@ -10,14 +10,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="body">
   <div class="wrapper">
     <header>
       <div class="header_content">
         <h1 class="logo">Singolo<span>*</span></h1>
         <nav class="menu">
           <ul id="header_menu">
-            <li class="active"><a href="#" >Home</a></li>
+            <li class="active"><a href="#">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#about">About</a></li>
@@ -43,8 +43,8 @@
         </div>
       </div>
 
-      <div class="blue_phone slide">
-        <img class="vertical_image_center" src="assets/phone-vertical-display.png" alt="Vertical center wallpaper">
+      <div id="blue_phone" class="blue_phone slide">
+        <img id="v_blue_image" class="vertical_image_center" src="assets/phone-vertical-display.png" alt="Vertical center wallpaper">
         <img class="vertical_base_center" src="assets/phone-vertical.svg" alt="Base">
         <img class="vertical_shadow_center" src="assets/phone-vertical-shadow.png" alt="Vertical center shadow">
         <img class="left_image" src="assets/phone-vertical-display-1.png" alt="Vertical left wallpaper">
@@ -59,8 +59,9 @@
           alt="Right arrow"></a>
     </div>
 
+    <div><a name="services"></a></div>
     <div class="services">
-      <h2> <a name="services"></a> Our Services</h2>
+      <h2>Our Services</h2>
       <p class="our_services">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
         commodo
         luctus, nisi erat
@@ -105,15 +106,15 @@
       </section>
     </div>
 
-    <a name="portfolio"></a>
+    <div><a name="portfolio"></a></div>
     <div class="portfolio" id="portfolio">
       <h2 class="title_portfolio">Portfolio</h2>
       <p class="text_portfolio">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
         nec elit.</p>
-      <a href="#portfolio" class="portfolio_active">All</a>
-      <a href="#portfolio">Web Design</a>
-      <a href="#portfolio">Graphic Design</a>
-      <a href="#portfolio">Artwork</a>
+      <a class="portfolio_active">All</a>
+      <a>Web Design</a>
+      <a>Graphic Design</a>
+      <a>Artwork</a>
 
       <ul class="image_portfolio" id="portfolio_img">
         <li><img src="assets/image_1.png" alt="" width="220px" height="187px"></li>
@@ -131,8 +132,9 @@
       </ul>
     </div>
 
+    <div><a name="about"></a></div>
     <div class="about_us">
-      <h3 class="title_about_us"> <a name="about"></a>About Us</h3>
+      <h3 class="title_about_us"> About Us</h3>
       <p class="text_about_us">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
         commodo luctus, nisi erat
         porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
@@ -174,23 +176,24 @@
         </li>
       </ul>
     </div>
-
+    <div><a name="contact"></a></div>
     <div class="contact">
-      <h2 class="contact_title"> <a name="contact"></a>Get a Quote</h2>
+      <h2 class="contact_title"> Get a Quote</h2>
       <p class="contact_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
         commodo luctus, nisi
         erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
         condimentum nibh.</p>
 
       <div class="contact_form">
-        <form action="#" method="POST">
+        <form action="#" method="POST" name="form">
           <p><input type="text" name="name" id="name_field" placeholder="Name (Required)" required
               pattern="^[a-zA-Z]+$"></p>
           <p><input type="email" name="email" id="email_field" placeholder="Email (Required)" required></p>
           <p><input type="text" name="subject" id="subject_field" placeholder="Subject"></p>
-          <p><textarea name="project" id="project_field" placeholder="Describe your project in detail..."></textarea>
+          <p><textarea name="project" id="project_field" maxlength="200"
+              placeholder="Describe your project in detail..."></textarea>
           </p>
-          <button type="submit">Submit</button>
+          <button id="submit">Submit</button>
         </form>
 
         <div class="contact_info">
@@ -205,6 +208,14 @@
             <li><img src="assets/mail_icon.png" class="img_mail" alt=""><a
                 href="mailto:info@singolo.com">info@singolo.com</a></li>
           </ul>
+        </div>
+        <div id="message_block" class="hidden">
+          <div id="message" class="hidden">
+            <p>The letter was sent</p>
+            <p id="subject"></p>
+            <p id="description"></p>
+            <button id="close_btn">OK</button>
+          </div>
         </div>
       </div>
 
