@@ -21,8 +21,16 @@
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin-top: 0;
+}
+
+.over_hidden {
+  overflow: hidden;
 }
 
 /*header*/
@@ -31,6 +39,9 @@ header {
   background: #2d303a;
   box-shadow: 0px 6px 0px #323746;
   padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .header_content {
@@ -80,13 +91,13 @@ a {
   text-decoration: none;
 }
 
-.menu a:not(.active):hover{
+.menu li:not(.active) a:hover {
   color: #c75e5a;
 }
 
-.active > a{
- border: 1px solid #fff;
- padding: 5px;
+.active > a {
+  border: 1px solid #fff;
+  padding: 5px;
 }
 
 span {
@@ -102,6 +113,7 @@ span {
   position: relative;
   margin-top: 6px;
   padding: 0 40px;
+  transition: ease-in-out 0.5s;
 }
 
 .blue_phone {
@@ -357,6 +369,7 @@ article {
   height: 20px;
   padding: 3px 7px;
   margin-right: 4px;
+  cursor: pointer;
 }
 
 .portfolio a:hover {
@@ -364,14 +377,14 @@ article {
   border-color: #c5c5c5;
 }
 
-.portfolio > .portfolio_active {
+.portfolio>.portfolio_active {
   color: #c5c5c5;
   border-color: #c5c5c5;
 }
 
 .image_portfolio {
   margin-top: 21px;
-  /* max-height: 605px; */
+  max-height: 605px;
   margin-right: -10px;
   display: grid;
   gap: 16px 0;
@@ -380,8 +393,9 @@ article {
   overflow: hidden;
 }
 
-.border > img {
+.border>img {
   border: 5px solid #F06C64;
+  box-sizing: border-box;
 }
 
 /* about us block */
@@ -395,7 +409,8 @@ article {
 }
 
 .title_about_us {
-  font: 30px 'Lato Black', sans-serif;
+  font: 30px 'Lato Regular', sans-serif;
+  font-weight: 900;
   color: #666d89;
   padding-top: 59px;
 }
@@ -484,7 +499,8 @@ form p:first-child {
   margin-top: 20px;
 }
 
-input, textarea{
+input,
+textarea {
   background: #d6564f;
   border: 0;
   outline: none;
@@ -512,13 +528,15 @@ button {
   border-radius: 5px;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ 
-  color: #e87675; 
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #e87675;
   font: 12px 'Lato Light', sans-serif;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder { 
-  color: #e87675; 
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #e87675;
   font: 12px 'Lato Light', sans-serif;
 }
 
@@ -574,6 +592,38 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   position: absolute;
   left: -15px;
   top: 6px;
+}
+
+#message_block {
+  position: fixed;
+  background: #0008;
+  font: 16px 'Lato Regular', sans-serif;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#message {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  border: 2px solid #773433;
+  border-style: dotted;
+  text-align: center;
+  background: #e87675;
+  max-height: 300px;
+  width: 500px;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+#close_btn {
+  margin: 40px;
+}
+
+.hidden {
+  display: none;
 }
 
 footer {
