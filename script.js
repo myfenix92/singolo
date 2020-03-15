@@ -1,4 +1,10 @@
 const menu = document.getElementById('header_menu')
+const imageVertical = document.getElementById('v_image')
+const imageHorizontal = document.getElementById('h_image')
+const imageBlueVertical = document.getElementById('v_blue_image')
+const portfolioBorder = document.getElementById('portfolio_img')
+const button = document.getElementById('submit')
+const closeButton = document.getElementById('close_btn')
 
 //меню
 
@@ -24,45 +30,51 @@ document.getElementById('right_arrow').onclick = function () {
 //display off - done
 
 document.getElementById('image_phone_v').onclick = function () {
-  let images = document.getElementById('v_image')
-  if (images.hidden == false) {
-    images.hidden = true
+  if (imageVertical.hidden == false) {
+    imageVertical.hidden = true
   } else {
-    images.hidden = false
+    imageVertical.hidden = false
   }
 }
 
 document.getElementById('image_phone_h').onclick = function () {
-  let images = document.getElementById('h_image')
-  if (images.hidden == false) {
-    images.hidden = true
+  if (imageHorizontal.hidden == false) {
+    imageHorizontal.hidden = true
   } else {
-    images.hidden = false
+    imageHorizontal.hidden = false
   }
 }
 
-//slider - сделать движение
+document.getElementById('blue_phone').onclick = function () {
+  if (imageBlueVertical.hidden == false) {
+    imageBlueVertical.hidden = true
+  } else {
+    imageBlueVertical.hidden = false
+  }
+}
 
-/* »ндекс слайда по умолчанию */
+//slider
+
+//индекс слайда по умолчанию
 let slideIndex = 1;
 showSlides(slideIndex);
 
-/* ‘ункци€ увеличивает индекс на 1, показывает следующй слайд*/
+//функция увеличивает индекс на 1, показывает следующй слайд
 function plusSlide() {
   showSlides(slideIndex += 1);
 }
 
-/* ‘ункци€ уменьш€ет индекс на 1, показывает предыдущий слайд*/
+// функция уменьшает индекс на 1, показывает предыдущий слайд
 function minusSlide() {
   showSlides(slideIndex -= 1);
 }
 
-/* ”станавливает текущий слайд */
+//устанавливает текущий слайд
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-/* ќсновна€ функци€ слайдера */
+// основная функция слайдера
 function showSlides(n) {
   let i
   let slides = document.getElementsByClassName('slide')
@@ -77,6 +89,9 @@ function showSlides(n) {
 
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none'
+    imageVertical.hidden = false
+    imageHorizontal.hidden = false
+    imageBlueVertical.hidden = false
   }
 
   slides[slideIndex - 1].style.display = 'block'
@@ -84,8 +99,6 @@ function showSlides(n) {
 
 //border portfolio    
 
-//разобратьс€ в css с обрезкой нижней части border
-const portfolioBorder = document.getElementById('portfolio_img')
 portfolioBorder.addEventListener('click', (event) => {
   if (event.target.tagName === 'IMG') {
     portfolioBorder.querySelectorAll('li').forEach(el => {
@@ -95,14 +108,59 @@ portfolioBorder.addEventListener('click', (event) => {
   }
 })
 
-//tab active смена картинок может что поправить
+function shuffledArr() {
+  return (Math.random() - 0.5)
+};
 
+//tab active
 let portfolioActive = document.getElementById('portfolio')
 portfolioActive.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
     portfolioActive.querySelectorAll('a').forEach(el => el.classList.remove('portfolio_active'))
-    const randomImg = document.getElementById('portfolio_img').querySelectorAll('li')
-    document.getElementById('portfolio_img').insertAdjacentElement('afterbegin', randomImg[randomImg.length-1])
+    let img = document.getElementById('portfolio_img').querySelectorAll('li')
+    let list = document.getElementById('portfolio_img')
+    let sorted = [...img].sort(shuffledArr)
+    list.innerHTML = ''
+    for (let li of sorted) {
+      list.appendChild(li)
+    }
     event.target.classList.add('portfolio_active')
   }
+})
+
+//форма
+
+button.addEventListener('click', (event) => {
+
+  if (document.getElementById('name_field').checkValidity() && document.getElementById('email_field').checkValidity()) {
+    event.preventDefault()
+
+    let valueSubject = document.getElementById('subject_field').value.toString()
+    let valueProject = document.getElementById('project_field').value.toString()
+    const valueNameSubject = document.getElementById('subject')
+    const valueNameDescription = document.getElementById('description')
+
+    if (valueSubject === '') {
+      valueNameSubject.innerHTML = 'Without subject'
+    } else {
+      document.getElementById('subject').innerHTML = 'Subject: ' + valueSubject
+    }
+
+    if (valueProject === '') {
+      valueNameDescription.innerHTML = 'Without description'
+    } else {
+      document.getElementById('description').innerHTML = 'Description: ' + valueProject
+    }
+
+    document.getElementById('message_block').classList.remove('hidden')
+    document.getElementById('message').classList.remove('hidden')
+    document.getElementById('body').classList.add('over_hidden')
+  }
+})
+
+closeButton.addEventListener('click', () => {
+  document.getElementById('message_block').classList.add('hidden')
+  document.getElementById('message').classList.add('hidden')
+  document.getElementById('body').classList.remove('over_hidden')
+  document.getElementsByName('form')[0].reset()
 })
