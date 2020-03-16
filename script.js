@@ -117,6 +117,10 @@ let portfolioActive = document.getElementById('portfolio')
 portfolioActive.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
     portfolioActive.querySelectorAll('a').forEach(el => el.classList.remove('portfolio_active'))
+    event.target.classList.add('portfolio_active')
+  }
+
+  if (event.target.classList[0] == 'link_all' || event.target.classList[0] == 'link_web' || event.target.classList[0] == 'link_graphic' || event.target.classList[0] == 'link_artwork') {
     let img = document.getElementById('portfolio_img').querySelectorAll('li')
     let list = document.getElementById('portfolio_img')
     let sorted = [...img].sort(shuffledArr)
@@ -124,7 +128,10 @@ portfolioActive.addEventListener('click', (event) => {
     for (let li of sorted) {
       list.appendChild(li)
     }
-    event.target.classList.add('portfolio_active')
+    event.target.classList.remove('link_all')
+    event.target.classList.remove('link_web')
+    event.target.classList.remove('link_graphic')
+    event.target.classList.remove('link_artwork')
   }
 })
 
