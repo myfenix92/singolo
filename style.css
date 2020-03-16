@@ -96,8 +96,7 @@ a {
 }
 
 .active > a {
-  border: 1px solid #fff;
-  padding: 5px;
+  color: #f06c64;
 }
 
 span {
