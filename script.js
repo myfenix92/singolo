@@ -29,7 +29,7 @@ document.getElementById('right_arrow').onclick = function () {
 
 //display off - done
 
-document.getElementById('image_phone_v').onclick = function () {
+document.getElementById('phone_btn_vertical').onclick = function () {
   if (imageVertical.hidden == false) {
     imageVertical.hidden = true
   } else {
@@ -37,7 +37,7 @@ document.getElementById('image_phone_v').onclick = function () {
   }
 }
 
-document.getElementById('image_phone_h').onclick = function () {
+document.getElementById('phone_btn_horizontal').onclick = function () {
   if (imageHorizontal.hidden == false) {
     imageHorizontal.hidden = true
   } else {
@@ -45,7 +45,7 @@ document.getElementById('image_phone_h').onclick = function () {
   }
 }
 
-document.getElementById('blue_phone').onclick = function () {
+document.getElementById('phone_btn_center').onclick = function () {
   if (imageBlueVertical.hidden == false) {
     imageBlueVertical.hidden = true
   } else {
@@ -117,6 +117,10 @@ let portfolioActive = document.getElementById('portfolio')
 portfolioActive.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
     portfolioActive.querySelectorAll('a').forEach(el => el.classList.remove('portfolio_active'))
+    event.target.classList.add('portfolio_active')
+  }
+
+  if (event.target.classList[0] == 'link_all' || event.target.classList[0] == 'link_web' || event.target.classList[0] == 'link_graphic' || event.target.classList[0] == 'link_artwork') {
     let img = document.getElementById('portfolio_img').querySelectorAll('li')
     let list = document.getElementById('portfolio_img')
     let sorted = [...img].sort(shuffledArr)
@@ -124,7 +128,10 @@ portfolioActive.addEventListener('click', (event) => {
     for (let li of sorted) {
       list.appendChild(li)
     }
-    event.target.classList.add('portfolio_active')
+    event.target.classList.remove('link_all')
+    event.target.classList.remove('link_web')
+    event.target.classList.remove('link_graphic')
+    event.target.classList.remove('link_artwork')
   }
 })
 

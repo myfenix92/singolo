@@ -41,7 +41,7 @@ header {
   padding: 0 40px;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 7;
 }
 
 .header_content {
@@ -96,8 +96,7 @@ a {
 }
 
 .active > a {
-  border: 1px solid #fff;
-  padding: 5px;
+  color: #f06c64;
 }
 
 span {
@@ -135,6 +134,30 @@ span {
   position: absolute;
   top: 174px;
   right: 111px;
+}
+
+.phone_btn_h {
+  position: absolute;
+  z-index: 2;
+  top: 260px;
+  left: 433px;
+  cursor: pointer;
+}
+
+.phone_btn_v {
+  position: absolute;
+  z-index: 2;
+  bottom: 91px;
+  left: 198px;
+  cursor: pointer;
+}
+
+.phone_btn_c {
+  position: absolute;
+  z-index: 5;
+  bottom: 75px;
+  left: 476px;
+  cursor: pointer;
 }
 
 .horizontal_image {
@@ -176,7 +199,7 @@ span {
   position: absolute;
   z-index: 6;
   top: 112px;
-  left: 397px;
+  left: 398px;
 }
 
 .vertical_shadow_center {
