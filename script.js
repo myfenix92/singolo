@@ -29,7 +29,7 @@ document.getElementById('right_arrow').onclick = function () {
 
 //display off - done
 
-document.getElementById('image_phone_v').onclick = function () {
+document.getElementById('phone_btn_vertical').onclick = function () {
   if (imageVertical.hidden == false) {
     imageVertical.hidden = true
   } else {
@@ -37,7 +37,7 @@ document.getElementById('image_phone_v').onclick = function () {
   }
 }
 
-document.getElementById('image_phone_h').onclick = function () {
+document.getElementById('phone_btn_horizontal').onclick = function () {
   if (imageHorizontal.hidden == false) {
     imageHorizontal.hidden = true
   } else {
@@ -45,7 +45,7 @@ document.getElementById('image_phone_h').onclick = function () {
   }
 }
 
-document.getElementById('blue_phone').onclick = function () {
+document.getElementById('phone_btn_center').onclick = function () {
   if (imageBlueVertical.hidden == false) {
     imageBlueVertical.hidden = true
   } else {
