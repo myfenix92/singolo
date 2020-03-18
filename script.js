@@ -1,4 +1,3 @@
-const menu = document.getElementById('header_menu')
 const imageVertical = document.getElementById('v_image')
 const imageHorizontal = document.getElementById('h_image')
 const imageBlueVertical = document.getElementById('v_blue_image')
@@ -6,18 +5,39 @@ const portfolioBorder = document.getElementById('portfolio_img')
 const button = document.getElementById('submit')
 const closeButton = document.getElementById('close_btn')
 
-//меню
+//menu
 
-menu.addEventListener('click', (event) => {
-  if (event.target.tagName === 'A') {
-    menu.querySelectorAll('li').forEach(el => {
-      el.classList.remove('active')
-    })
-    event.target.parentNode.classList.add('active')
-  }
-})
+function menuActive(i) {
+  const links = document.getElementById('header_menu').querySelectorAll('li')
+  links.forEach(el => {
+    el.classList.remove('active')
+  })
+  links[i].classList.add('active')
+}
 
-//смена цвета фона
+//scroll active menu
+
+document.addEventListener('scroll', onScroll)
+
+function onScroll() {
+  const curPos = window.scrollY
+  const servicesBlockPos = document.getElementById('services').offsetTop - 89
+  const portfolioBlockPos = document.getElementById("portfolio").offsetTop - 89
+  const aboutBlockPos = document.getElementById('about').offsetTop - 89
+  const contactBlockPos = document.getElementById('contact').offsetTop - 89
+
+  if (curPos < servicesBlockPos) menuActive(0)
+  else if (curPos >= servicesBlockPos && curPos < portfolioBlockPos) menuActive(1)
+  else if (curPos >= portfolioBlockPos && curPos < aboutBlockPos) menuActive(2)
+  else if (curPos >= aboutBlockPos && curPos < contactBlockPos && !endPage()) menuActive(3)
+  if (endPage() || curPos >= contactBlockPos) menuActive(4)
+}
+
+function endPage() {
+  return window.window.scrollY >= document.documentElement.offsetHeight - innerHeight
+}
+
+//change bg slider
 
 document.getElementById('left_arrow').onclick = function () {
   document.getElementById('slider_block').classList.toggle('blue')
@@ -113,7 +133,7 @@ function shuffledArr() {
 };
 
 //tab active
-let portfolioActive = document.getElementById('portfolio')
+let portfolioActive = document.getElementById('portfolio_block')
 portfolioActive.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
     portfolioActive.querySelectorAll('a').forEach(el => el.classList.remove('portfolio_active'))
@@ -129,7 +149,7 @@ portfolioActive.addEventListener('click', (event) => {
   }
 })
 
-//форма
+//form
 
 button.addEventListener('click', (event) => {
 
