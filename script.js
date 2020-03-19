@@ -22,7 +22,7 @@ document.addEventListener('scroll', onScroll)
 function onScroll() {
   const curPos = window.scrollY
   const servicesBlockPos = document.getElementById('services').offsetTop - 89
-  const portfolioBlockPos = document.getElementById("portfolio").offsetTop - 89
+  const portfolioBlockPos = document.getElementById('portfolio').offsetTop - 89
   const aboutBlockPos = document.getElementById('about').offsetTop - 89
   const contactBlockPos = document.getElementById('contact').offsetTop - 89
 
@@ -158,18 +158,23 @@ function shuffledArr() {
 let portfolioActive = document.getElementById('portfolio_block')
 portfolioActive.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
-    portfolioActive.querySelectorAll('a').forEach(el => el.classList.remove('portfolio_active'))
+    portfolioActive.querySelectorAll('a').forEach(el => el.classList.remove('portfolio_active', 'pointer'))
     event.target.classList.add('portfolio_active')
-
-    let img = document.getElementById('portfolio_img').querySelectorAll('li')
-    let list = document.getElementById('portfolio_img')
-    let sorted = [...img].sort(shuffledArr)
-    list.innerHTML = ''
-    for (let li of sorted) {
-      list.appendChild(li)
     }
-  }
+
+    if(event.target.classList == 'portfolio_active') {
+      let img = document.getElementById('portfolio_img').querySelectorAll('li')
+      let list = document.getElementById('portfolio_img')
+      let sorted = [...img].sort(shuffledArr)
+      list.innerHTML = ''
+      for (let li of sorted) {
+        list.appendChild(li)
+      }
+      event.target.classList.add('pointer')
+    }
 })
+
+
 
 //form
 
