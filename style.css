@@ -16,7 +16,7 @@
     url('assets/lato-v16-latin-300.woff') format('woff')
 }
 
-.wrapper {
+#wrapper {
   width: 1020px;
   margin: 0 auto;
 }
@@ -33,18 +33,34 @@ body {
   overflow: hidden;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -89px;
+  visibility: hidden;
+}
+
+.pointer {
+  pointer-events: none;
+}
+
+
 /*header*/
 
 header {
   background: #2d303a;
   box-shadow: 0px 6px 0px #323746;
   padding: 0 40px;
-  position: sticky;
+  position: fixed;
+  left: 50%;
+  margin-left: -510px;
+  width: 940px;
+  height: 89px;
   top: 0;
-  z-index: 3;
+  z-index: 7;
 }
 
-.header_content {
+#header_content {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -86,18 +102,19 @@ li {
   color: #d3d4d5;
 }
 
-a {
+.menu a {
   color: #d3d4d5;
   text-decoration: none;
 }
 
 .menu li:not(.active) a:hover {
-  color: #c75e5a;
+  /*color: #c75e5a;*/
+  text-decoration: underline;
 }
 
-.active > a {
-  border: 1px solid #fff;
-  padding: 5px;
+.active a{
+  color: #f06c64;
+  text-decoration: overline;
 }
 
 span {
@@ -111,17 +128,60 @@ span {
   box-shadow: 0px 6px 0px #ea676b;
   height: 594px;
   position: relative;
-  margin-top: 6px;
-  padding: 0 40px;
-  transition: ease-in-out 0.5s;
+  margin-top: 95px;
+  transition: 1s ease-in-out;
+  overflow: hidden;
 }
 
-.blue_phone {
+.slide {
   display: none;
+  position: relative;
+  animation: 1s ease-in-out;
+}
+
+.active_slider, .next {
+  display: block;
 }
 
 .blue {
   background: #648BF0;
+  box-shadow: 0px 6px 0px #67b6ea;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 .horizontal_base {
@@ -135,6 +195,30 @@ span {
   position: absolute;
   top: 174px;
   right: 111px;
+}
+
+.phone_btn_h {
+  position: absolute;
+  z-index: 2;
+  top: 260px;
+  left: 433px;
+  cursor: pointer;
+}
+
+.phone_btn_v {
+  position: absolute;
+  z-index: 2;
+  top: 460px;
+  left: 198px;
+  cursor: pointer;
+}
+
+.phone_btn_c {
+  position: absolute;
+  z-index: 5;
+  top: 477px;
+  left: 476px;
+  cursor: pointer;
 }
 
 .horizontal_image {
@@ -176,7 +260,7 @@ span {
   position: absolute;
   z-index: 6;
   top: 112px;
-  left: 397px;
+  left: 398px;
 }
 
 .vertical_shadow_center {
@@ -632,7 +716,7 @@ footer {
   color: #575d74;
   display: grid;
   grid-template-columns: 4fr 1fr;
-  margin-top: -6px;
+  margin-top: -5px;
 }
 
 .footer_copy {

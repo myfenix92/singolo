@@ -11,9 +11,9 @@
 </head>
 
 <body id="body">
-  <div class="wrapper">
+  
     <header>
-      <div class="header_content">
+      <div id="header_content">
         <h1 class="logo">Singolo<span>*</span></h1>
         <nav class="menu">
           <ul id="header_menu">
@@ -26,40 +26,47 @@
         </nav>
       </div>
     </header>
-
-    <div id="slider_block" class="slider">
-      <a href="#" onclick="minusSlide()"><img id="left_arrow" class="img_left" src="assets/left.png"
-          alt="Left arrow"></a>
-      <div class="red_phone slide">
-        <div id="image_phone_h">
-          <img id="h_image" class="horizontal_image" src="assets/horizontal_image.png" alt="Horizontal wallpaper">
-          <img class="horizontal_base" src="assets/base.png" alt="Base">
-          <img class="horizontal_shadow" src="assets/horizontal_shadow.png" alt="Horizontal shadow">
+    <div id="wrapper">
+      <div class="slider" id="slider_block">
+        <a href="#"><img id="left_arrow" class="img_left" src="assets/left.png"
+            alt="Left arrow"></a>
+  
+        <div class="red_phone slide active_slider">
+          <div id="image_phone_h">
+            <img id="h_image" class="horizontal_image" src="assets/horizontal_image.png" alt="Horizontal wallpaper">
+            <img class="horizontal_base" src="assets/base.png" alt="Base">
+            <img id="phone_btn_horizontal" class="phone_btn_h" src="assets/phone_btn.png" alt="Phone button">
+            <img class="horizontal_shadow" src="assets/horizontal_shadow.png" alt="Horizontal shadow">
+          </div>
+          <div id="image_phone_v">
+            <img id="v_image" class="vertical_image" src="assets/vertical_image.png" alt="Vertical wallpaper">
+            <img id="v_base" class="vertical_base" src="assets/base.png" alt="Base">
+            <img id="phone_btn_vertical" class="phone_btn_v" src="assets/phone_btn.png" alt="Phone button">
+            <img class="vertical_shadow" src="assets/vertical_shadow.png" alt="Vertical shadow">
+          </div>
         </div>
-        <div id="image_phone_v">
-          <img id="v_image" class="vertical_image" src="assets/vertical_image.png" alt="Vertical wallpaper">
-          <img class="vertical_base" src="assets/base.png" alt="Base">
-          <img class="vertical_shadow" src="assets/vertical_shadow.png" alt="Vertical shadow">
+  
+        <div class="blue_phone slide">
+          <img id="v_blue_image" class="vertical_image_center" src="assets/phone-vertical-display.png"
+            alt="Vertical center wallpaper">
+          <img class="vertical_base_center" src="assets/phone-vertical1.png" alt="Base">
+          <img id="phone_btn_center" class="phone_btn_c" src="assets/phone_btn.png" alt="Phone button">
+          <img class="vertical_shadow_center" src="assets/phone-vertical-shadow.png" alt="Vertical center shadow">
+          <img class="left_image" src="assets/phone-vertical-display-1.png" alt="Vertical left wallpaper">
+          <img class="left_base" src="assets/phone-vertical-1.svg" alt="Base left">
+          <img class="left_shadow" src="assets/phone-vertical-shadow-1.png" alt="Vertical left shadow">
+          <img class="right_image" src="assets/phone-vertical-display-2.png" alt="Vertical right wallpaper">
+          <img class="right_base" src="assets/phone-vertical-2.svg" alt="Base right">
+          <img class="right_shadow" src="assets/phone-vertical-shadow-2.png" alt="Vertical right shadow">
         </div>
+  
+  
+        <a href="#"><img id="right_arrow" class="img_right" src="assets/right.png"
+            alt="Right arrow"></a>
       </div>
 
-      <div id="blue_phone" class="blue_phone slide">
-        <img id="v_blue_image" class="vertical_image_center" src="assets/phone-vertical-display.png" alt="Vertical center wallpaper">
-        <img class="vertical_base_center" src="assets/phone-vertical.svg" alt="Base">
-        <img class="vertical_shadow_center" src="assets/phone-vertical-shadow.png" alt="Vertical center shadow">
-        <img class="left_image" src="assets/phone-vertical-display-1.png" alt="Vertical left wallpaper">
-        <img class="left_base" src="assets/phone-vertical-1.svg" alt="Base left">
-        <img class="left_shadow" src="assets/phone-vertical-shadow-1.png" alt="Vertical left shadow">
-        <img class="right_image" src="assets/phone-vertical-display-2.png" alt="Vertical right wallpaper">
-        <img class="right_base" src="assets/phone-vertical-2.svg" alt="Base right">
-        <img class="right_shadow" src="assets/phone-vertical-shadow-2.png" alt="Vertical right shadow">
-      </div>
+    <div><a id="services" class="anchor"></a></div>
 
-      <a href="#" onclick="plusSlide()"><img id="right_arrow" class="img_right" src="assets/right.png"
-          alt="Right arrow"></a>
-    </div>
-
-    <div><a name="services"></a></div>
     <div class="services">
       <h2>Our Services</h2>
       <p class="our_services">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -106,15 +113,16 @@
       </section>
     </div>
 
-    <div><a name="portfolio"></a></div>
-    <div class="portfolio" id="portfolio">
+    <div><a id="portfolio" class="anchor"></a></div>
+
+    <div class="portfolio" id="portfolio_block">
       <h2 class="title_portfolio">Portfolio</h2>
       <p class="text_portfolio">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
         nec elit.</p>
-      <a class="portfolio_active">All</a>
-      <a>Web Design</a>
-      <a>Graphic Design</a>
-      <a>Artwork</a>
+      <a href="javascript:void(0)">All</a>
+      <a href="javascript:void(0)">Web Design</a>
+      <a href="javascript:void(0)">Graphic Design</a>
+      <a href="javascript:void(0)">Artwork</a>
 
       <ul class="image_portfolio" id="portfolio_img">
         <li><img src="assets/image_1.png" alt="" width="220px" height="187px"></li>
@@ -132,7 +140,8 @@
       </ul>
     </div>
 
-    <div><a name="about"></a></div>
+    <div><a id="about" class="anchor"></a></div>
+
     <div class="about_us">
       <h3 class="title_about_us"> About Us</h3>
       <p class="text_about_us">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -176,7 +185,9 @@
         </li>
       </ul>
     </div>
-    <div><a name="contact"></a></div>
+
+    <div><a id="contact" class="anchor"></a></div>
+
     <div class="contact">
       <h2 class="contact_title"> Get a Quote</h2>
       <p class="contact_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -218,8 +229,8 @@
           </div>
         </div>
       </div>
-
     </div>
+    
     <footer>
       <p class="footer_copy">&copy; Copyright 2013</p>
       <ul class="footer_links">
