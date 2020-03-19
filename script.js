@@ -75,47 +75,69 @@ document.getElementById('phone_btn_center').onclick = function () {
 
 //slider
 
-//индекс слайда по умолчанию
-let slideIndex = 1;
-showSlides(slideIndex);
+let items = document.querySelectorAll('.slide')
+let curItem = 0
+let isEnabled = true
 
-//функция увеличивает индекс на 1, показывает следующй слайд
-function plusSlide() {
-  showSlides(slideIndex += 1);
+function changeCurItem(n) {
+  curItem = (n + items.length) % items.length
 }
 
-// функция уменьшает индекс на 1, показывает предыдущий слайд
-function minusSlide() {
-  showSlides(slideIndex -= 1);
+function hideItem(direction) {
+  isEnabled = false
+  items[curItem].classList.add(direction)
+  items[curItem].addEventListener('animationend', function() {
+    this.classList.remove('active_slider', direction)
+    if (imageVertical.hidden == true) {
+      imageVertical.hidden = false
+    }
+
+    if (imageBlueVertical.hidden == true) {
+      imageBlueVertical.hidden = false
+    }
+
+    if (imageHorizontal.hidden == true) {
+      imageHorizontal.hidden = false
+    }
+  })
+  
 }
 
-//устанавливает текущий слайд
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function showItem(direction) {
+  items[curItem].classList.add('next', direction)
+  items[curItem].addEventListener('animationend', function() {
+    this.classList.remove('next', direction)
+    this.classList.add('active_slider')
+    isEnabled = true
+  })
+  
 }
 
-// основная функция слайдера
-function showSlides(n) {
-  let i
-  let slides = document.getElementsByClassName('slide')
-
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none'
-    imageVertical.hidden = false
-    imageHorizontal.hidden = false
-    imageBlueVertical.hidden = false
-  }
-
-  slides[slideIndex - 1].style.display = 'block'
+function previousItem(n) {
+  hideItem('to-right')
+  changeCurItem(n - 1)
+  showItem('from-left')
+  
 }
+
+function nexItem(n) {
+  hideItem('to-left')
+  changeCurItem(n + 1)
+  showItem('from-right')
+}
+
+document.querySelector('.img_left').addEventListener('click', function() {
+  if(isEnabled) {
+    previousItem(curItem)
+  } 
+ 
+})
+
+document.querySelector('.img_right').addEventListener('click', function() {
+  if(isEnabled) {
+    nexItem(curItem)
+  } 
+})
 
 //border portfolio    
 
