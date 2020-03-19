@@ -40,6 +40,10 @@ a.anchor {
   visibility: hidden;
 }
 
+.pointer {
+  pointer-events: none;
+}
+
 
 /*header*/
 
