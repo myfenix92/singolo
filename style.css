@@ -125,15 +125,59 @@ span {
   height: 594px;
   position: relative;
   margin-top: 95px;
-  transition: ease-in-out 0.5s;
+  transition: 1s ease-in-out;
+  overflow: hidden;
 }
 
-.blue_phone {
+.slide {
   display: none;
+  position: relative;
+  animation: 1s ease-in-out;
+}
+
+.active_slider, .next {
+  display: block;
 }
 
 .blue {
   background: #648BF0;
+  box-shadow: 0px 6px 0px #67b6ea;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 .horizontal_base {
@@ -160,7 +204,7 @@ span {
 .phone_btn_v {
   position: absolute;
   z-index: 2;
-  bottom: 91px;
+  top: 460px;
   left: 198px;
   cursor: pointer;
 }
@@ -168,7 +212,7 @@ span {
 .phone_btn_c {
   position: absolute;
   z-index: 5;
-  bottom: 75px;
+  top: 477px;
   left: 476px;
   cursor: pointer;
 }
