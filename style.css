@@ -770,6 +770,10 @@ footer {
     width: 100%;
   }
 
+  .person_text {
+    padding-bottom: calc(20px + 5%);
+  }
+
   .contact_form {
     gap: 20px;
   }
@@ -777,5 +781,30 @@ footer {
   input,
   textarea {
     width: 93%;
+  }
+
+  form p {
+    margin: 10px 0;
+  }
+
+  .contact_text {
+    padding-bottom: calc(20px - 1%);
+  }
+
+  form p:first-child {
+    margin-top: calc(20px - 1.6%);
+  }
+
+  .contact_info {
+    margin-top: calc(20px - 12%);
+    margin-left: -11px;
+  }
+
+  .contact_item {
+    margin-top: -4%;
+  }
+
+  .contact_info_text {
+    margin-top: calc(12px - 1%);
   }
 }
