@@ -86,7 +86,7 @@ function changeCurItem(n) {
 function hideItem(direction) {
   isEnabled = false
   items[curItem].classList.add(direction)
-  items[curItem].addEventListener('animationend', function() {
+  items[curItem].addEventListener('animationend', function () {
     this.classList.remove('active_slider', direction)
     if (imageVertical.hidden == true) {
       imageVertical.hidden = false
@@ -100,24 +100,24 @@ function hideItem(direction) {
       imageHorizontal.hidden = false
     }
   })
-  
+
 }
 
 function showItem(direction) {
   items[curItem].classList.add('next', direction)
-  items[curItem].addEventListener('animationend', function() {
+  items[curItem].addEventListener('animationend', function () {
     this.classList.remove('next', direction)
     this.classList.add('active_slider')
     isEnabled = true
   })
-  
+
 }
 
 function previousItem(n) {
   hideItem('to-right')
   changeCurItem(n - 1)
   showItem('from-left')
-  
+
 }
 
 function nexItem(n) {
@@ -126,17 +126,17 @@ function nexItem(n) {
   showItem('from-right')
 }
 
-document.querySelector('.img_left').addEventListener('click', function() {
-  if(isEnabled) {
+document.querySelector('.img_left').addEventListener('click', function () {
+  if (isEnabled) {
     previousItem(curItem)
-  } 
- 
+  }
+
 })
 
-document.querySelector('.img_right').addEventListener('click', function() {
-  if(isEnabled) {
+document.querySelector('.img_right').addEventListener('click', function () {
+  if (isEnabled) {
     nexItem(curItem)
-  } 
+  }
 })
 
 //border portfolio    
@@ -160,18 +160,18 @@ portfolioActive.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
     portfolioActive.querySelectorAll('a').forEach(el => el.classList.remove('portfolio_active', 'pointer'))
     event.target.classList.add('portfolio_active')
-    }
+  }
 
-    if(event.target.classList == 'portfolio_active') {
-      let img = document.getElementById('portfolio_img').querySelectorAll('li')
-      let list = document.getElementById('portfolio_img')
-      let sorted = [...img].sort(shuffledArr)
-      list.innerHTML = ''
-      for (let li of sorted) {
-        list.appendChild(li)
-      }
-      event.target.classList.add('pointer')
+  if (event.target.classList == 'portfolio_active') {
+    let img = document.getElementById('portfolio_img').querySelectorAll('li')
+    let list = document.getElementById('portfolio_img')
+    let sorted = [...img].sort(shuffledArr)
+    list.innerHTML = ''
+    for (let li of sorted) {
+      list.appendChild(li)
     }
+    event.target.classList.add('pointer')
+  }
 })
 
 
@@ -211,4 +211,25 @@ closeButton.addEventListener('click', () => {
   document.getElementById('message').classList.add('hidden')
   document.getElementById('body').classList.remove('over_hidden')
   document.getElementsByName('form')[0].reset()
+})
+
+//burger menu
+
+document.getElementById('menu_mobile').onclick = function () {
+  document.getElementById('menu_img').classList.toggle('menu_transform')
+  document.getElementById('overlay').classList.toggle('filter_menu')
+  open()
+
+};
+
+function open() {
+  document.getElementById('nav_menu').classList.toggle('show')
+}
+
+document.getElementById('nav_menu').addEventListener('click', (event) => {
+  if (event.target.tagName === 'A') {
+    document.getElementById('nav_menu').classList.remove('show')
+    document.getElementById('overlay').classList.remove('filter_menu')
+    document.getElementById('menu_img').classList.remove('menu_transform')
+  }
 })
