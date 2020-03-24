@@ -63,6 +63,10 @@ header {
   z-index: 7;
 }
 
+.menu_icon {
+  display: none;
+}
+
 #header_content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -117,7 +121,7 @@ li {
 
 .active a {
   color: #f06c64;
-  text-decoration: overline;
+  /* text-decoration: overline; */
 }
 
 span {
@@ -485,6 +489,7 @@ article {
 }
 
 .border>img {
+  width: 220px;
   border: 5px solid #F06C64;
   box-sizing: border-box;
 }
@@ -889,7 +894,7 @@ footer {
   .image_portfolio {
     gap: 16px 20px;
     grid-template-columns: repeat(3, 1fr);
-    max-height: 794px;
+    max-height: 105vw;
     width: 100%;
   }
 
@@ -934,5 +939,142 @@ footer {
 
   .contact_info_text {
     margin-top: calc(12px - 1%);
+  }
+}
+
+@media (max-width: 767px) {
+
+  #wrapper {
+    max-width: 100%;
+  }
+
+  #wrapper>div:not(:first-child) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  header {
+    max-height: 65px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .show {
+    display: block;
+    height: 100vw;
+    width: 50px;
+  }
+
+  .filter_menu {
+    background-color: #2D303A;
+    opacity: 50%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 6;
+  }
+
+  .menu ul li:not(:last-child):after {
+    content: "";
+  }
+
+  .menu_transform {
+    transition: ease 0.5s;
+    transform: rotate(90deg);
+  }
+
+  #header_content {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: -8px;
+    z-index: 10;
+  }
+
+  #header_menu {
+    background-color: #2D303A;
+    display: block;
+    height: 100vh;
+    width: 60%;
+    position: fixed;
+    left: 0%;
+    top: -3%;
+    padding-top: 204px;
+    z-index: -1;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu ul li {
+    text-align-last: left;
+    list-style: none;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .menu a {
+    font-size: 24px;
+
+  }
+
+  .menu_icon {
+    display: block;
+    position: absolute;
+    top: 33px;
+    left: -19px;
+  }
+
+  #menu_img {
+    transition: ease 0.5s;
+  }
+
+
+  .img_left {
+    top: 37.6%;
+    left: -2%;
+  }
+
+  .img_right {
+    top: 37.6%;
+    right: -1.5%;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  .image_portfolio {
+    gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 152vw;
+    width: 100%;
+  }
+
+  .about_persons {
+    gap: 25px;
+    grid-template-columns: 1fr;
+  }
+
+  .person_text {
+    margin-bottom: 0;
+  }
+
+  .contact_form {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .footer_copy {
+    display: none;
+  }
+
+  .footer_links {
+    position: relative;
+    top: -8px;
+    left: 37px;
   }
 }
