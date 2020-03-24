@@ -744,7 +744,7 @@ footer {
 
 /* media */
 
-@media screen and (max-width: 1019px) {
+@media (max-width: 1019px) {
   #wrapper {
     max-width: 100%;
   }
@@ -763,7 +763,7 @@ footer {
   }
 
   .slide {
-    width: 100%;
+    width: 98vw;
   }
 
   .horizontal_base {
@@ -779,15 +779,15 @@ footer {
   }
 
   .horizontal_image {
-    width: 32.6%;
+    width: 32.5%;
     top: 18.8vw;
-    right: 19.9vw;
+    right: 19.8vw;
   }
 
   .phone_btn_h {
     width: 4.3%;
     top: 25.8vw;
-    left: 42.2vw;
+    left: 41.2vw;
   }
 
   .vertical_base {
@@ -803,14 +803,14 @@ footer {
   }
 
   .vertical_image {
-    width: 18.4%;
-    top: 11.6vw;
-    left: 12.4vw;
+    width: 18.3%;
+    top: 11.8vw;
+    left: 12.3vw;
   }
 
   .phone_btn_v {
     width: 4.3%;
-    top: 45vw;
+    top: 44.5vw;
     left: 19.4vw;
   }
 
@@ -818,7 +818,7 @@ footer {
 
   .phone_btn_c {
     width: 4.3%;
-    top: 45.5vw;
+    top: 44.5vw;
     left: 48vw;
   }
 
