@@ -819,8 +819,6 @@ footer {
     left: 19.4vw;
   }
 
-  /*  */
-
   .phone_btn_c {
     width: 4.3%;
     top: 44.5vw;
@@ -940,6 +938,10 @@ footer {
   .contact_info_text {
     margin-top: calc(12px - 1%);
   }
+
+  #message {
+    left: 16%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -963,7 +965,6 @@ footer {
 
   .show {
     display: block;
-    height: 100vw;
     width: 50px;
   }
 
@@ -1015,7 +1016,6 @@ footer {
 
   .menu a {
     font-size: 24px;
-
   }
 
   .menu_icon {
@@ -1029,6 +1029,13 @@ footer {
     transition: ease 0.5s;
   }
 
+  .horizontal_shadow {
+    left: 41vw;
+  }
+
+  .vertical_shadow {
+    top: 5.2vw;
+  }
 
   .img_left {
     top: 37.6%;
@@ -1042,6 +1049,10 @@ footer {
 
   section {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio_link a {
+    padding: 2px 3px;
   }
 
   .image_portfolio {
@@ -1064,7 +1075,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  button {
+  #submit {
     width: 100%;
   }
 
@@ -1076,5 +1087,20 @@ footer {
     position: relative;
     top: -8px;
     left: 37px;
+  }
+
+  #message {
+    width: 73vw;
+    left: 12%;
+  }
+}
+
+@media (max-width: 364px) {
+  .person_text {
+    padding-bottom: calc(20px + 12%);
+  }
+
+  .footer_links {
+    left: 16px;
   }
 }
