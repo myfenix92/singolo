@@ -472,7 +472,7 @@ article {
   border-color: #c5c5c5;
 }
 
-.portfolio>.portfolio_active {
+.portfolio_link .portfolio_active {
   color: #c5c5c5;
   border-color: #c5c5c5;
 }
@@ -1044,7 +1044,7 @@ footer {
 
   .img_right {
     top: 37.6%;
-    right: -1.5%;
+    right: -1%;
   }
 
   section {
