@@ -1,2 +1,2 @@
 # singolo
-https://myfenix92.github.io/singolo
+[Ссылка на сайт](https://myfenix92-singolo.netlify.app/)
